@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 interface ComponentInterface{
 
@@ -71,11 +72,30 @@ export class InicioPage implements OnInit {
       name: 'Input',
       redirectTo: '/input'
     },
+    {
+      icon: 'list-outline',
+      name: 'List',
+      redirectTo: '/list'
+    },
+    {
+      icon: 'reorder-three-outline',
+      name: 'List - Reorder',
+      redirectTo: '/list-reorder'
+    },
+    {
+      icon: 'refresh-circle-outline',
+      name: 'Loading',
+      redirectTo: '/loading'
+    },
   ];
 
-  constructor() { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
+  }
+
+  openMenu(){
+    this.menu.open('first');
   }
 
 }
