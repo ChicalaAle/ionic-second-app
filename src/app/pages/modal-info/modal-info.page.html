@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>{{ nombre }} - {{ apellido }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button (click)="salirSinArgumentos()" expand="block">
+    Salir sin argumentos
+  </ion-button>
+
+  <ion-button (click)="salirConArgumentos()" expand="block">
+    Salir con argumentos
+  </ion-button>
+  
+
+</ion-content>
+
+<ion-footer class="ion-text-center text-small">
+  <ion-toolbar>
+    <ion-title>{{ empresa }}</ion-title>
+  </ion-toolbar>
+</ion-footer>
